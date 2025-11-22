@@ -1,0 +1,147 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "margin-bottom": 0,
+  "spacing": 10,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/submap"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "tray"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "format-icons": {
+      "1": "󰎯",
+      "2": "󰎨",
+      "3": "󰎬",
+      "4": "󰎮",
+      "5": "󰎲",
+      "active": "",
+      "default": ""
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "all-outputs": false
+  },
+
+  "hyprland/submap": {
+    "format": "{}",
+    "max-length": 8
+  },
+
+  "clock": {
+    "format": "󰃭 {:%H:%M}",
+    "format-alt": "󰃭 {:%A, %B %d, %Y}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc6d'><b>{}</b></span>",
+        "today": "<span color='#ff6e6e'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+
+  "cpu": {
+    "format": "󰍛 {usage}%",
+    "tooltip": true,
+    "interval": 5
+  },
+
+  "memory": {
+    "format": "󰟜 {percentage}%",
+    "tooltip": true,
+    "interval": 5
+  },
+
+  "temperature": {
+    "thermal-zone": 0,
+    "format": "󰔏 {temperatureC}°C",
+    "critical-threshold": 80,
+    "format-critical": "󰔏 {temperatureC}°C"
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-full": "󰂄 {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄 {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰂎",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰗖"
+    ],
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "tooltip": false
+  },
+
+  "network": {
+    "format": "󰤨",
+    "format-wifi": "󰤨 {essid}",
+    "format-ethernet": "󰌘 Wired",
+    "format-disconnected": "󰌙",
+    "tooltip-format": "SSID: {essid}\nIP: {ipaddr}\nSignal: {signalStrength}%",
+    "on-click": ""
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂰 {volume}%",
+    "format-bluetooth-muted": "󰂯",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󰋎",
+      "headset": "󰋎",
+      "phone": "󰏲",
+      "portable": "󰏲",
+      "car": "󰄋",
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "on-click": "pavucontrol",
+    "scroll-step": 5
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8
+  }
+}

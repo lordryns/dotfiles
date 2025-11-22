@@ -1,0 +1,195 @@
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: #cdd6f4;
+}
+
+window#waybar {
+  background-color: rgba(30, 30, 46, 0.9);
+  border-bottom: 1px solid rgba(205, 214, 244, 0.1);
+  padding: 0px 0px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/*== Modules ==*/
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#network,
+#pulseaudio,
+#tray {
+  background-color: rgba(49, 50, 68, 0.5);
+  padding: 6px 12px;
+  margin: 5px 2px;
+  transition: background-color 0.2s ease;
+}
+
+/*== Workspaces ==*/
+#workspaces {
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+}
+
+#workspaces button {
+  background-color: rgba(49, 50, 68, 0.5);
+  color: #a6adc8;
+  padding: 6px 10px;
+  margin: 5px 3px;
+  transition: background-color 0.2s ease;
+  font-weight: bold;
+}
+
+#workspaces button:hover {
+  background-color: rgba(88, 86, 214, 0.4);
+  color: #f38ba8;
+}
+
+#workspaces button.active {
+  background-color: rgba(88, 86, 214, 0.5);
+  color: #cdd6f4;
+  font-weight: bold;
+}
+
+#workspaces button.empty {
+  background-color: rgba(49, 50, 68, 0.3);
+  color: #6c7086;
+}
+
+/*== Clock ==*/
+#clock {
+  background-color: rgba(49, 50, 68, 0.5);
+  color: #e0def4;
+  font-weight: bold;
+  min-width: 120px;
+}
+
+#clock:hover {
+  background-color: rgba(88, 86, 214, 0.4);
+}
+
+/*== System Modules ==*/
+#cpu {
+  color: #f38ba8;
+}
+
+#cpu:hover {
+  background-color: rgba(243, 139, 168, 0.3);
+}
+
+#memory {
+  color: #a6e3a1;
+}
+
+#memory:hover {
+  background-color: rgba(166, 227, 161, 0.3);
+}
+
+#temperature {
+  color: #fab387;
+}
+
+#temperature:hover {
+  background-color: rgba(250, 179, 135, 0.3);
+}
+
+#temperature.critical {
+  color: #ff6e6e;
+  background-color: rgba(255, 110, 110, 0.2);
+}
+
+/*== Battery ==*/
+#battery {
+  color: #89dceb;
+}
+
+#battery.charging {
+  color: #a6e3a1;
+}
+
+#battery.warning:not(.charging) {
+  color: #f9e2af;
+}
+
+#battery.critical:not(.charging) {
+  color: #ff6e6e;
+  background-color: rgba(255, 110, 110, 0.2);
+}
+
+#battery:hover {
+  background-color: rgba(137, 220, 235, 0.3);
+}
+
+/*== Network ==*/
+#network {
+  color: #b4befe;
+}
+
+#network.connected {
+  color: #a6e3a1;
+}
+
+#network.disconnected {
+  color: #ff6e6e;
+}
+
+#network:hover {
+  background-color: rgba(180, 190, 254, 0.3);
+}
+
+/*== Pulseaudio ==*/
+#pulseaudio {
+  color: #eba0ac;
+}
+
+#pulseaudio.muted {
+  color: #6c7086;
+}
+
+#pulseaudio:hover {
+  background-color: rgba(235, 160, 172, 0.3);
+}
+
+/*== Submap ==*/
+#submap {
+  background-color: rgba(243, 139, 168, 0.3);
+  color: #f38ba8;
+  padding: 8px 12px;
+  margin: 5px 2px;
+  font-weight: bold;
+}
+
+/*== Tray ==*/
+#tray {
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+/*== Tooltip ==*/
+tooltip {
+  background-color: rgba(30, 30, 46, 0.95);
+  border: 1px solid rgba(205, 214, 244, 0.2);
+  padding: 8px 12px;
+  color: #cdd6f4;
+}
+
+tooltip label {
+  color: #cdd6f4;
+}
